@@ -1,12 +1,21 @@
 <html>
     <head>
-        <title>
+        {% if title %}
 
-        </title>
+        <title> Flask Bog - {{title}} </title>
+        {%else%}
+
+        <title> Flask Bog </title>
+
+        {%endif%}
+
     </head>
     <body>
-        <h1>
-            Home Page
-        </h1>
+        {%for post in posts%}
+            <h1>{{post.title}}</h1>
+            <p>by {{post.author}} on {{post.date_posted}}</p>
+            <p>{{post.content}}</p>
+            <br>
+        {%endfor%}
     </body>
 </html>

@@ -1,7 +1,15 @@
 <html>
     <head>
-        <title>Flask Blog</title>
-    </head>
+                {% if title %}
+        
+                <title> Flask Bog - {{title}} </title>
+                {%else%}
+        
+                <title> Flask Bog </title>
+        
+                {%endif%}
+        
+     </head>
     <body>
         <h1>
             About Page
